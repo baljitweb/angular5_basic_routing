@@ -1,3 +1,10 @@
+#purpose of this demo
+This is basic routing in Angular 5, in which parent component [appComponnet] has 2 child components [favComponent] and [allToolsComponnet].
+FavComponent is displaying data via fetching a json from local json file i.e. fav.json.
+
+Routing has its own separate module which imported in main.module.ts.
+
+
 # Start
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
