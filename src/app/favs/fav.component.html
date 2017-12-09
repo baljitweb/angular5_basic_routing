@@ -1,0 +1,19 @@
+<div id="favComponent">
+    {{title}} 
+    length : {{data.length}}
+    <div style="float:right;"><button>{{btnInfo}}</button></div>
+    <div>
+        <ul *ngFor="let fav of data; let i = index">
+            <li>
+                <div class="extended">
+                    <span class="arrow" (click)="showPopFn(fav,i)">V</span>
+                    <div class="extendedLinks" [hidden]="!fav.showPop">
+                        <input type="radio" name="addTo{{i}}"  [value]="fav.id" (click)="addToFolder('New',fav)" /> Add to New folder
+                        <input type="radio" name="addTo{{i}}"  [value]="fav.id" (click)="addToFolder('Old',fav)" /> Add to Existing folder
+                    </div>
+                </div>
+                {{fav.name}}
+            </li>
+        </ul>
+    </div>
+</div>
